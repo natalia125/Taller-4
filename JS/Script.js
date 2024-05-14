@@ -58,11 +58,12 @@ function generateNavLinks() {
 // Función para generar las secciones de destino
 function generateDestinations() {
     const mainContent = document.getElementById('mainContent');
+    const baseURL = 'https://natalia125.github.io/Taller-4/RECURSOS/';
     const destinations = [
-        { country: 'ITALY', image: '../RECURSOS/Italia.jpg', description1: 'Rome, Milan, Naples', description2: 'SILVER HOTEL, 4 NIGHTS, 5 STARS', price: '$1,800 BOOK NOW' },
-        { country: 'FRANCE', image: '../RECURSOS/Francia.jpg', description1: 'Paris, Marseille, Lyon', description2: 'NEW PALACE, 5 NIGHTS, 5 STARS', price: '$2,300 BOOK NOW' },
-        { country: 'GERMANY', image: '../RECURSOS/Alemania.jpg', description1: 'Berlin, Hamburg, Munich', description2: 'LUXE HOTEL, 5 NIGHTS, 5 STARS', price: '$3,100 BOOK NOW' },
-        { country: 'SPAIN', image: '../RECURSOS/España.jpg', description1: 'Madrid, Barcelona, Valencia', description2: 'GHOOD HOTEL, 4 NIGHTS, 6 STARS', price: '$4,800 BOOK NOW' }
+        { country: 'ITALY', image: `${baseURL}Italia.jpg`, description1: 'Rome, Milan, Naples', description2: 'SILVER HOTEL, 4 NIGHTS, 5 STARS', price: '$1,800 BOOK NOW' },
+        { country: 'FRANCE', image: `${baseURL}Francia.jpg`, description1: 'Paris, Marseille, Lyon', description2: 'NEW PALACE, 5 NIGHTS, 5 STARS', price: '$2,300 BOOK NOW' },
+        { country: 'GERMANY', image: `${baseURL}Alemania.jpg`, description1: 'Berlin, Hamburg, Munich', description2: 'LUXE HOTEL, 5 NIGHTS, 5 STARS', price: '$3,100 BOOK NOW' },
+        { country: 'SPAIN', image: `${baseURL}España.jpg`, description1: 'Madrid, Barcelona, Valencia', description2: 'GHOOD HOTEL, 4 NIGHTS, 6 STARS', price: '$4,800 BOOK NOW' }
     ];
     
     destinations.forEach(destination => {
@@ -106,7 +107,8 @@ function generateDestinations() {
 // Función para generar las imágenes de la sección flex-container
 function generateFlexContainerImages() {
     const flexContainer = document.querySelector('.flex-container');
-    const images = ['../RECURSOS/01.png', '../RECURSOS/02.png', '../RECURSOS/03.png', '../RECURSOS/01.png', '../RECURSOS/02.png', '../RECURSOS/03.png'];
+    const baseURL = 'https://natalia125.github.io/Taller-4/RECURSOS/';
+    const images = [`${baseURL}01.png`, `${baseURL}02.png`, `${baseURL}03.png`, `${baseURL}01.png`, `${baseURL}02.png`, `${baseURL}03.png`];
     images.forEach(imageSrc => {
         const div = document.createElement('div');
         const img = document.createElement('img');
@@ -117,7 +119,6 @@ function generateFlexContainerImages() {
         flexContainer.appendChild(div);
     });
 }
-
 
 // Llamar a las funciones para generar los enlaces de navegación, las secciones de destino y las imágenes de la sección flex-container
 generateNavLinks();
