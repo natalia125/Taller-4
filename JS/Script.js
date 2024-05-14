@@ -106,7 +106,7 @@ function generateDestinations() {
 // Función para generar las imágenes de la sección flex-container
 function generateFlexContainerImages() {
     const flexContainer = document.querySelector('.flex-container');
-    const images = ['./RECURSOS/01.png', './RECURSOS/02.png', './RECURSOS/03.png', './RECURSOS/01.png', './RECURSOS/02.png', './RECURSOS/03.png'];
+    const images = ['../RECURSOS/01.png', '../RECURSOS/02.png', '../RECURSOS/03.png', '../RECURSOS/01.png', '../RECURSOS/02.png', '../RECURSOS/03.png'];
     images.forEach(imageSrc => {
         const div = document.createElement('div');
         const img = document.createElement('img');
