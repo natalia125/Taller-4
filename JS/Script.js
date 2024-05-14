@@ -58,14 +58,20 @@ function generateNavLinks() {
 // Función para generar las secciones de destino
 function generateDestinations() {
     const mainContent = document.getElementById('mainContent');
-    const destinations = [
-        { country: 'ITALY', image: 'RECURSOS/Italia.jpg', description1: 'Rome, Milan, Naples', description2: 'SILVER HOTEL, 4 NIGHTS, 5 STARS', price: '$1,800 BOOK NOW' },
-        { country: 'FRANCE', image: 'RECURSOS/Francia.jpg', description1: 'Paris, Marseille, Lyon', description2: 'NEW PALACE, 5 NIGHTS, 5 STARS', price: '$2,300 BOOK NOW' },
-        { country: 'GERMANY', image: 'RECURSOS/Alemania.jpg', description1: 'Berlin, Hamburg, Munich', description2: 'LUXE HOTEL, 5 NIGHTS, 5 STARS', price: '$3,100 BOOK NOW' },
-        { country: 'SPAIN', image: 'RECURSOS/España.jpg', description1: 'Madrid, Barcelona, Valencia', description2: 'GHOOD HOTEL, 4 NIGHTS, 6 STARS', price: '$4,800 BOOK NOW' }
+    const images = [
+        'RECURSOS/Italia.jpg',
+        'RECURSOS/Francia.jpg',
+        'RECURSOS/Alemania.jpg',
+        'RECURSOS/España.jpg'
     ];
-    
-    destinations.forEach(destination => {
+    const destinations = [
+        { country: 'ITALY', description1: 'Rome, Milan, Naples', description2: 'SILVER HOTEL, 4 NIGHTS, 5 STARS', price: '$1,800 BOOK NOW' },
+        { country: 'FRANCE', description1: 'Paris, Marseille, Lyon', description2: 'NEW PALACE, 5 NIGHTS, 5 STARS', price: '$2,300 BOOK NOW' },
+        { country: 'GERMANY', description1: 'Berlin, Hamburg, Munich', description2: 'LUXE HOTEL, 5 NIGHTS, 5 STARS', price: '$3,100 BOOK NOW' },
+        { country: 'SPAIN', description1: 'Madrid, Barcelona, Valencia', description2: 'GHOOD HOTEL, 4 NIGHTS, 6 STARS', price: '$4,800 BOOK NOW' }
+    ];
+
+    destinations.forEach((destination, index) => {
         const section = document.createElement('section');
         section.classList.add('destination');
 
@@ -76,7 +82,7 @@ function generateDestinations() {
         h3.textContent = destination.country;
 
         const img = document.createElement('img');
-        img.src = destination.image;
+        img.src = images[index];
         img.alt = destination.country;
 
         destinationInfo.appendChild(h3);
@@ -102,6 +108,7 @@ function generateDestinations() {
         mainContent.appendChild(section);
     });
 }
+
 
 // Función para generar las imágenes de la sección flex-container
 function generateFlexContainerImages() {
